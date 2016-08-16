@@ -10,7 +10,7 @@ app.controller('mainCtrl', ['$scope', '$timeout', function ($scope, $timeout) {
         for (var item in results.content) {
             randomArray.push(item);
         }
-        var randomArticle = randomArray[0];
+        var randomArticle = randomArray[randomNumber];
         var articleUrl = results.content[randomArticle].url;
         $scope.randomArticle = "http://steemit.com" + articleUrl;
         $scope.$apply();
