@@ -1,4 +1,4 @@
-var app = angular.module('app', []);
+var app = angular.module('app', ['ngMaterial', 'ui.bootstrap', 'ui.navbar']);
 
 
 app.controller('mainCtrl', ['$scope', '$timeout', function ($scope, $timeout) {
