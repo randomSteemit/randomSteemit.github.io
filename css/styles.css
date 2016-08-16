@@ -1,28 +1,9 @@
-.messageBar {
-    position: absolute;
-    bottom:0;
-    width: 95%;
-    height: auto;
-    overflow: hidden !important;
-    margin-bottom: 5px;
+.mobileBreak {
+    display: none !important;
 }
 
-.messageContainer{
-    display: inline-block;
-    color: black;
-    width: 100%;
-    overflow: hidden !important;
-}
-
-input.chatbar {
-    display: inline-block;
-    width: 85%;
-    border:#000 2px solid !important;
-    height: 25px;
-    overflow: hidden !important;
-}
-
-.submitButton {
-    display: inline-block;
-    height: 25px;
+@media (max-width: 450px) {
+    .mobileBreak {
+        display: block !important;
+    }
 }
