@@ -17,14 +17,7 @@ app.controller('mainCtrl', ['$scope', '$timeout', function ($scope, $timeout) {
     })
 
     setTimeout(function () {
-        var win = window.open($scope.randomArticle, '_blank');
-        if (win) {
-            //Browser has allowed it to be opened
-            win.focus();
-        } else {
-            //Browser has blocked it
-            alert('Please allow popups for this website to redirect to steemit!');
-        }
+        window.open($scope.randomArticle, '_blank');
     }, 8000)
 
 
