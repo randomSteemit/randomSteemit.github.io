@@ -17,7 +17,6 @@ app.controller('mainCtrl', ['$scope', '$timeout', function ($scope, $timeout) {
     })
 
     setTimeout(function () {
-        //window.open($scope.randomArticle, '_blank');
         OpenInNewTab($scope.randomArticle);
     }, 8000)
 
