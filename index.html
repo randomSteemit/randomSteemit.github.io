@@ -28,17 +28,21 @@
 </head>
 
 <body ng-app="app" ng-controller="mainCtrl">
-    <div layout="column" layout-align="start center">
+    <div layout="column" layout-align="start center" style="text-align: center;">
         <div>
-            <img src="img/RandomSteemit_Transparent.png" />
+            <a href="http://randomsteemit.com"><img src="img/RandomSteemit_Transparent.png" /></a>
         </div>
-        <div style="text-align: center;">
+        <div class="middleDiv">
             <h3>Welcome to Random Steemit <br>
             by <a href="https://steemit.com/@tyler-fletcher">@tyler-fletcher</a></h3>
 
             <p>You will redirect to a random steemit article in <br class="mobileBreak">{{timer}} seconds...</p>
             <p>If The Page Deoesn't Open, <br class="mobileBreak">Disable Popup Blocking For This Site.<br> Or, Click <a ng-href="{{randomArticle}}" target="_blank">Here</a></p>
             <br>
+        </div>
+        <div class="bottomDiv">
+            <p class="steemAddress">Feeling Generous? Throw Some Steem My Way!<br>1MeeMKUqUBFdeWHo8z7KCNKNyM2G9uNqYC</p>
+            <p class="bitcoinAddress">No Steem? Bitcoin Works Too!<br>1GxA13iPCY1r1PXc4YNKUAdf3pzxtYyQtD</p>
         </div>
     </div>
 </body>

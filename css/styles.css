@@ -1,9 +1,52 @@
+html,
+body a {
+    text-decoration: none;
+    color: #165098;
+}
+
 .mobileBreak {
     display: none !important;
+}
+
+.middleDiv {
+    margin-top: 30px;
+}
+
+.bottomDiv {
+    position: fixed;
+    bottom: 0;
+    display: inherit;
+}
+
+.steemAddress {
+    display: inline-block;
+    padding-right: 40px;
+}
+
+.bitcoinAddress {
+    display: inline-block;
+    padding-left: 40px;
 }
 
 @media (max-width: 450px) {
     .mobileBreak {
         display: block !important;
+    }
+    .bottomDiv {
+        font-size: 0.8em;
+    }
+}
+
+@media (max-width: 770px) {
+    .bottomDiv {
+        display: block;
+    }
+    .steemAddress {
+        float: none;
+        padding: 0px;
+    }
+    .bitcoinAddress {
+        float: none;
+        padding: 0px;
     }
 }
