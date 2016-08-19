@@ -23,7 +23,7 @@ a {
 }
 
 a:hover {
-    cursor: url(../img/steemit.cur), auto;
+    cursor: url(../img/steemit.cur) 15 12.5, auto;
 }
 
 .mobileBreak {

@@ -3,6 +3,9 @@ var app = angular.module('app', ['ngMaterial', 'ui.bootstrap', 'ui.navbar']);
 
 app.controller('mainCtrl', ['$scope', '$timeout', function ($scope, $timeout) {
 
+    // Call the page load data handler and set the data
+    getData(handleDataTimeout);
+
     // Set a timeout to countdown a scoped var
     // For the "Seconds Left" on index.html
     setTimeout(countDown, 1000);
@@ -13,9 +16,6 @@ app.controller('mainCtrl', ['$scope', '$timeout', function ($scope, $timeout) {
         $scope.timer = timerSeconds;
         $scope.$apply();
     }
-
-    // Call the page load data handler and set the data
-    getData(handleDataTimeout);
 
     // Data handler for page load
     function handleDataTimeout(articleUrl) {
@@ -63,7 +63,7 @@ app.controller('mainCtrl', ['$scope', '$timeout', function ($scope, $timeout) {
     // your data handler for button click
     function handleDataOnClick(articleUrl) {
         $scope.randomArticleUrl = "http://steemit.com" + articleUrl;
-        setTimeout(openPageNow(), 100); // fraction of a second delay
+        setTimeout(openPageNow(), 500); // fraction of a second delay
     }
 
     // Function to generate a new random article with no delay
