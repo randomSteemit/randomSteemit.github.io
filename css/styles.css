@@ -9,7 +9,7 @@ body a {
 }
 
 a:hover {
-    cursor: url(/img/steemit.png), auto;
+    cursor: url(../img/steemit.png), auto;
 }
 
 .mobileBreak {
