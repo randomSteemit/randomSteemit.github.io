@@ -27,7 +27,7 @@ app.controller('mainCtrl', ['$scope', '$timeout', function ($scope, $timeout) {
     function getData(callback) {
         steem.getState("/created", function (err, results) {
             var randomArray = [];
-            var randomNumber = Math.floor(Math.random() * 20) + 1;
+            var randomNumber = Math.floor(Math.random() * 40) + 1;
 
             for (var item in results.content) {randomArray.push(item)}
 

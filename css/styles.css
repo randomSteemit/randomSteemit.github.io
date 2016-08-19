@@ -8,6 +8,10 @@ body a {
     color: #165098;
 }
 
+a:hover {
+    cursor: url(/img/steemit.png), auto;
+}
+
 .mobileBreak {
     display: none !important;
 }
