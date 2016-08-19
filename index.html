@@ -15,6 +15,8 @@
     <script src="node_modules/angular-aria/angular-aria.min.js"></script>
 
     <!-- App CSS -->
+
+
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <link rel="stylesheet" type="text/css" href="node_modules/angular-ui-bootstrap/dist/ui-bootstrap-csp.css">
     <link rel="stylesheet" type="text/css" href="node_modules/ui-navbar/release/css/ui-navbar.min.css">
@@ -46,25 +48,36 @@
 </head>
 
 <body ng-app="app" ng-controller="mainCtrl">
-    <div layout="column" layout-align="start center" style="text-align: center;">
-        <div>
-            <a href="http://randomsteemit.com"><img src="img/RandomSteemit.png" /></a>
-        </div>
-        <div class="middleDiv">
-            <h3>Welcome to Random Steemit <br>
-            by <a href="https://steemit.com/@tyler-fletcher">@tyler-fletcher</a></h3>
-            <br>
-            <p>You Will Redirect To A Random Steemit Article <br class="mobileBreak">In {{timer}} Seconds...</p>
-            <br>
-            <p>Done With Your Article or<br class="mobileBreak"> The First One Didn't Open?<br><br>
-                Click <a ng-click="generateNewArticle()">Here</a> To Generate A New Link!</p>
-            <br>
-        </div>
-        <div class="bottomDiv">
-            <p class="steemAddress">Feeling Generous? <a href="http://www.steempayments.com/payment?receiver=tyler-fletcher&amount=0&paymentID=aN7pokZezmgLT3pfys&callback=steempayments.com%2Fexample" onclick="ga('send', {hitType: 'event', eventCategory: 'Donations', eventAction: 'click', eventLabel: 'Steem'});">Throw Some Steem My Way!</a></p>
-            <p class="bitcoinAddress">No Steem? <a href="https://www.coinbase.com/00Dark30" target="_blank" onclick="ga('send', {hitType: 'event', eventCategory: 'Donations', eventAction: 'click', eventLabel: 'Bitcoin'});">Bitcoin Works Too!</a></p>
+    <div class="content">
+        <div layout="column" layout-align="start center">
+            <div>
+                <a href="http://randomsteemit.com"><img src="img/RandomSteemit.png" /></a>
+            </div>
+            <div class="middleDiv">
+                <h3>Welcome to Random Steemit <br>
+                by <a href="https://steemit.com/@tyler-fletcher">@tyler-fletcher</a></h3>
+                <br>
+                <p>You Will Redirect To A Random Steemit Article <br class="mobileBreak">In {{timer}} Seconds...</p>
+                <br>
+                <p>Done With Your Article or<br class="mobileBreak"> The First One Didn't Open?<br><br>
+                    Click <a ng-click="generateNewArticle()">Here</a> To Generate A New Link!</p>
+                <br>
+            </div>
+    <!--
+            <div class="bottomDiv">
+                <p class="steemAddress">Feeling Generous? <a href="http://www.steempayments.com/payment?receiver=tyler-fletcher&amount=0&paymentID=aN7pokZezmgLT3pfys&callback=steempayments.com%2Fexample" onclick="ga('send', {hitType: 'event', eventCategory: 'Donations', eventAction: 'click', eventLabel: 'Steem'});">Throw Some Steem My Way!</a></p>
+                <p class="bitcoinAddress">No Steem? <a href="https://www.coinbase.com/00Dark30" target="_blank" onclick="ga('send', {hitType: 'event', eventCategory: 'Donations', eventAction: 'click', eventLabel: 'Bitcoin'});">Bitcoin Works Too!</a></p>
+            </div>
+    -->
         </div>
     </div>
+    <footer class="footer">
+        <p class="steemAddress">Feeling Generous? <a href="http://www.steempayments.com/payment?receiver=tyler-fletcher&amount=0&paymentID=aN7pokZezmgLT3pfys&callback=steempayments.com%2Fexample" onclick="ga('send', {hitType: 'event', eventCategory: 'Donations', eventAction: 'click', eventLabel: 'Steem'});">Throw Some Steem My Way!</a></p>
+
+        <br class="mobileBreak">
+
+        <p class="bitcoinAddress">No Steem? <a href="https://www.coinbase.com/00Dark30" target="_blank" onclick="ga('send', {hitType: 'event', eventCategory: 'Donations', eventAction: 'click', eventLabel: 'Bitcoin'});">Bitcoin Works Too!</a></p>
+    </footer>
 </body>
 
 </html>
