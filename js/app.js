@@ -27,12 +27,14 @@ app.controller('mainCtrl', ['$scope', '$timeout', function ($scope, $timeout) {
     function getData(callback) {
         steem.getState("/created", function (err, results) {
             var randomArray = [];
-            var randomNumber = Math.floor(Math.random() * 40) + 1;
+            var randomNumber = Math.floor(Math.random() * 20) + 1;
+            console.log("Random Number: " + randomNumber);
 
             for (var item in results.content) {randomArray.push(item)}
 
             var randomArticleTitle = randomArray[randomNumber];
             var articleUrl = results.content[randomArticleTitle].url;
+            console.log("Article URL: " + articleUrl);
             callback(articleUrl);
         })
     }
@@ -61,7 +63,7 @@ app.controller('mainCtrl', ['$scope', '$timeout', function ($scope, $timeout) {
     // your data handler for button click
     function handleDataOnClick(articleUrl) {
         $scope.randomArticleUrl = "http://steemit.com" + articleUrl;
-        openPageNow();
+        setTimeout(openPageNow(), 100); // fraction of a second delay
     }
 
     // Function to generate a new random article with no delay
