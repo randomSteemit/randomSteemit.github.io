@@ -53,9 +53,11 @@
         <div class="middleDiv">
             <h3>Welcome to Random Steemit <br>
             by <a href="https://steemit.com/@tyler-fletcher">@tyler-fletcher</a></h3>
-
-            <p>You will redirect to a random steemit article in <br class="mobileBreak">{{timer}} seconds...</p>
-            <p>If The Page Deoesn't Open, <br class="mobileBreak">Disable Popup Blocking For This Site.<br> Or, Click <a ng-href="{{randomArticle}}" target="_blank">Here</a></p>
+            <br>
+            <p>You Will Redirect To A Random Steemit Article <br class="mobileBreak">In {{timer}} Seconds...</p>
+            <br>
+            <p>Done With Your Article or<br class="mobileBreak"> The First One Didn't Open?<br><br>
+                Click <a ng-click="generateNewArticle()">Here</a> To Generate A New Link!</p>
             <br>
         </div>
         <div class="bottomDiv">
