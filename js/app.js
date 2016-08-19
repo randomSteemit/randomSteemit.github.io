@@ -63,7 +63,7 @@ app.controller('mainCtrl', ['$scope', '$timeout', function ($scope, $timeout) {
     // your data handler for button click
     function handleDataOnClick(articleUrl) {
         $scope.randomArticleUrl = "http://steemit.com" + articleUrl;
-        setTimeout(openPageNow(), 500); // fraction of a second delay
+        //setTimeout(openPageNow(), 500); // fraction of a second delay
     }
 
     // Function to generate a new random article with no delay
