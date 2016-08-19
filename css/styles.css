@@ -1,3 +1,7 @@
+html, body {
+    background-color: #FFFFFF;
+}
+
 html,
 body a {
     text-decoration: none;
