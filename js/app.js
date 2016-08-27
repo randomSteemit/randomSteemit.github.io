@@ -8,9 +8,11 @@ app.controller('mainCtrl', ['$scope', '$timeout', function ($scope, $timeout) {
         $scope.$apply();
     });
 
-    // Call the page load data handler and set the data
-    getRandomArticle(handleDataTimeout);
-    getRandomSteemian(steemianOnClick);
+    setTimeout(function () {
+        // Call the page load data handler and set the data
+        getRandomArticle(handleDataTimeout);
+        getRandomSteemian(steemianOnClick);
+    }, 800);
 
     // Set a timeout to countdown a scoped var
     // For the "Seconds Left" on index.html
@@ -77,9 +79,12 @@ app.controller('mainCtrl', ['$scope', '$timeout', function ($scope, $timeout) {
     }
 
     function getRandomSteemian(callback) {
+        console.log("Total Steemians: " + $scope.totalAccounts);
+
         steem.lookupAccounts("", $scope.totalAccounts, function (err, result) {
             var randomNumber = Math.floor(Math.random() * ($scope.totalAccounts - 0 + 1)) + 0;
             var randomSteemian = result[randomNumber];
+            console.log("Random Steemian: @" + randomSteemian);
             callback(randomSteemian);
         })
     }
