@@ -3,6 +3,11 @@ var app = angular.module('app', ['ngMaterial', 'ui.bootstrap', 'ui.navbar']);
 
 app.controller('mainCtrl', ['$scope', '$timeout', function ($scope, $timeout) {
 
+    steem.getAccountCount(function (err, result) {
+        $scope.totalAccounts = result;
+        $scope.$apply();
+    });
+
     // Call the page load data handler and set the data
     getRandomArticle(handleDataTimeout);
     getRandomSteemian(steemianOnClick);
@@ -72,10 +77,8 @@ app.controller('mainCtrl', ['$scope', '$timeout', function ($scope, $timeout) {
     }
 
     function getRandomSteemian(callback) {
-        var totalAccount = 78000;
-
-        steem.lookupAccounts("", totalAccount, function (err, result) {
-            var randomNumber = Math.floor(Math.random() * (totalAccount - 0 + 1)) + 0;
+        steem.lookupAccounts("", $scope.totalAccounts, function (err, result) {
+            var randomNumber = Math.floor(Math.random() * ($scope.totalAccounts - 0 + 1)) + 0;
             var randomSteemian = result[randomNumber];
             callback(randomSteemian);
         })
