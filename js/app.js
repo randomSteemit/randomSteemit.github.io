@@ -3,7 +3,7 @@ var app = angular.module('app', ['ngMaterial', 'ui.bootstrap', 'ui.navbar']);
 
 app.controller('mainCtrl', ['$scope', '$timeout', function ($scope, $timeout) {
 
-    steem.getAccountCount(function (err, result) {
+    steem.api.getAccountCount(function (err, result) {
         $scope.totalAccounts = result;
         $scope.$apply();
     });
@@ -61,7 +61,7 @@ app.controller('mainCtrl', ['$scope', '$timeout', function ($scope, $timeout) {
 
         var randomState = Math.floor(Math.random() * (4 - 0 + 1)) + 0;
 
-        steem.getState(stateObject[randomState].state, function (err, results) {
+        steem.api.getState(stateObject[randomState].state, function (err, results) {
             var randomArray = [];
             var randomNumber = Math.floor(Math.random() * 20) + 1;
             console.log("Random Number: " + randomNumber);
@@ -81,7 +81,7 @@ app.controller('mainCtrl', ['$scope', '$timeout', function ($scope, $timeout) {
     function getRandomSteemian(callback) {
         console.log("Total Steemians: " + $scope.totalAccounts);
 
-        steem.lookupAccounts("", $scope.totalAccounts, function (err, result) {
+        steem.api.lookupAccounts("", $scope.totalAccounts, function (err, result) {
             var randomNumber = Math.floor(Math.random() * ($scope.totalAccounts - 0 + 1)) + 0;
             var randomSteemian = result[randomNumber];
             console.log("Random Steemian: @" + randomSteemian);
